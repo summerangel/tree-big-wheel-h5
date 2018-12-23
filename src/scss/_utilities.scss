@@ -1,0 +1,42 @@
+@import 'variables';
+
+.c-666 {
+  color: $gray;
+}
+
+.c-333 {
+  color: $color-base;
+}
+
+.c-999 {
+  color: $gray-light;
+}
+// padding
+.px-5 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.px-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+// margin
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+// font-size
+.font-10 {
+  font-size: $pixel-10;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-truncate {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}

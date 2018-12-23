@@ -1,0 +1,54 @@
+@import "../../scss/mixin";
+
+.big-wheel-wrap {
+  width: 100%;
+  //@include bg-img-cover('~assets/images/big-wheel/big_wheel_bg.png');
+  background-position: top;
+  //background-size: 100% 100%;
+  position: relative;
+  margin-top: -2px;
+  .coin-count {
+    color: #fff;
+    font-size: 33px;
+    position: absolute;
+    top: 210px;
+    left: 650px;
+  }
+  .wheel-box {
+    position: absolute;
+    top: 170px;
+    left: 30%;
+    transform: translate(-30%);
+  }
+  .exchange {
+    @include bg-img-cover('~assets/images/big-wheel/exchange_bg.png');
+    width: 873px;
+    height: 384px;
+    position: absolute;
+    top: 1300px;
+    left: 126px;
+  }
+  .exchage__big-btn, .exchage__small-btn {
+    @include bg-img-cover('~assets/images/big-wheel/exchange_btn.png');
+    background-size: 100% 100%;
+    width: 231px;
+    height: 78px;
+    position: absolute;
+    left: 519px;
+  }
+  .exchage__big-btn {
+    top: 60px;
+  }
+  .exchage__small-btn {
+    top: 219px;
+  }
+  .back-btn {
+    width: 405px;
+    height: 138px;
+    @include bg-img-cover('~assets/images/big-wheel/back_btn.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top: 1700px;
+    left: 360px;
+  }
+}

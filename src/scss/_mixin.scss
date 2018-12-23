@@ -1,0 +1,21 @@
+
+@mixin bg-img-base($path) {
+  background-image: url("#{$path}");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin bg-img-contain($path) {
+  @include bg-img-base($path);
+  background-size: contain;
+}
+
+@mixin bg-img-cover($path) {
+  @include bg-img-base($path);
+  background-size: cover;
+}
+
+@mixin animation-forwards($name, $duration, $delay) {
+  animation: $name $duration linear $delay;
+  animation-fill-mode: forwards;
+}

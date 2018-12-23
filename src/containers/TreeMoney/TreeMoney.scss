@@ -1,0 +1,173 @@
+@import "../../scss/mixin";
+
+.tree-money {
+  width: 100%;
+  //@include bg-img-contain('~assets/images/tree-money/tree_money_bg.png');
+  background-position: top;
+  //background-size: 100% 100%;
+  margin-top: -2px;
+  position: relative;
+  .rule-btn {
+    width: 138px;
+    height: 51px;
+    position: absolute;
+    top: 111px;
+    right: 30px;
+  }
+  .award-received {
+    width: 225px;
+    height: 162px;
+    position: absolute;
+    top: 480px;
+    left: 30px;
+  }
+  .coin-box {
+    z-index: 3;
+    position: absolute;
+    top: 480px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+  }
+  .coin-box__wrap {
+    position: absolute;
+    top: 0;
+    width: 165px;
+    height: 168px;
+    right: 9px;
+    @include bg-img-contain('~assets/images/tree-money/coin_show.png');
+  }
+  .coin-box__wrap__coin {
+    position: absolute;
+    width: 141px;
+    height: 42px;
+    color: #fff3a3;
+    font-size: 10px;
+    bottom: 4px;
+    left: 6px;
+    text-align: center;
+  }
+  .coin-box__wrap__toast {
+    display: none;
+    position: absolute;
+    top: 66px;
+    right: 150px;
+    width: 342px;
+    height: 69px;
+    @include bg-img-contain('~assets/images/tree-money/coin_toast.png');
+    background-size: 100% 100%;
+    color: #fff;
+    font-size: 45px;
+    line-height: 69px;
+    padding-left: 54px;
+    &.show {
+      display: block;
+    }
+  }
+  .coin-box__light {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    width: 252px;
+    height: 249px;
+    //z-index: -1;
+    @include bg-img-contain('~assets/images/tree-money/coin_effect.png');
+    animation: lightRound1 2s linear 1s infinite;
+    &.show {
+      display: block;
+    }
+  }
+  .tree-head {
+    position: absolute;
+    top: 573px;
+    left: 0;
+    @include bg-img-cover('~assets/images/tree-money/tree_head.png');
+    //background-size: 100% 100%;
+    background-color: transparent;
+    z-index: 2;
+    width: 1125px;
+    height: 726px;
+    background-position: 0 0;
+    &.treeShake {
+      animation: shakeTree .5s infinite linear;
+      animation-timing-function: step-start;
+    }
+  }
+  .tree-foot {
+    position: absolute;
+    top: 1179px;
+    left: 357px;
+    width: 354px;
+    height: 321px;
+    @include bg-img-cover('~assets/images/tree-money/tree_root.png');
+  }
+  .coin-fall {
+    position: absolute;
+    opacity: .001;
+    top: 720px;
+    left: 57px;
+    width: 945px;
+    height: 642px;
+    z-index: 3;
+    @include bg-img-cover('~assets/images/tree-money/coin_fall.png');
+    &.show {
+      opacity: 1;
+    }
+  }
+  .winner-carousel {
+    z-index: 4;
+    //width: 1.664rem;
+    position: absolute;
+    top: 1350px;
+    left: 270px;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+  }
+  .shake-btn {
+    position: absolute;
+    top: 1467px;
+    left: 240px;
+    width: 618px;
+    height: 225px;
+    @include bg-img-cover('~assets/images/tree-money/shake_btn.png');
+    background-size: 100% 100%;
+  }
+  .free-time {
+    position: absolute;
+    top: 1710px;
+    left: 0;
+    width: 1125px;
+    height: 57px;
+    color: #fff;
+    font-size: 39px;
+    text-align: center;
+    font-weight: 700;
+  }
+}
+
+@keyframes lightRound1 {
+  0% {
+    transform: translate(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0) rotate(1turn);
+  }
+}
+
+@keyframes shakeTree {
+  0% {
+    background-position-y: 0;
+  }
+
+  50% {
+    background-position-y: -714px;
+  }
+  100% {
+    width: 1125px;
+    height: 726px;
+    background-position-y: -1443px;
+  }
+}

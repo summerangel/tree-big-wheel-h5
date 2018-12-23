@@ -1,0 +1,10 @@
+@import "../../scss/mixin";
+
+.main-page-wrapper {
+  background-color: #00b050;
+  width: 100%;
+  @include bg-img-cover('~assets/images/whole_bg.png');
+  background-position: top;
+  //background-size: 100% 100%;
+  margin-top: -2px;
+}

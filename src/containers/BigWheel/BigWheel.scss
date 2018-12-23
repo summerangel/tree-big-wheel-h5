@@ -1,0 +1,49 @@
+@import "../../scss/mixin";
+
+.big-wheel-container {
+  $border-width: 1041px;
+  $wheel-width: 852px;
+  position: relative;
+  overflow: hidden;
+  .big-wheel {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 189px;
+    width: $border-width;
+    height: $border-width;
+    overflow: hidden;
+    @include bg-img-contain('~assets/images/big-wheel/wheel-border.png');
+  }
+  .big-wheel__inner {
+    position: relative;
+    margin: 0 auto;
+    width: $wheel-width;
+    height: $wheel-width;
+    @include bg-img-contain('~assets/images/big-wheel/wheel.png');
+  }
+  .big-wheel__inner__prize {
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: $wheel-width / 2;
+    width: 360px;
+    text-align: center;
+    > p {
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 36px;
+    }
+  }
+  .big-wheel-pointer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 252px;
+    height: 324px;
+    transform: translate(-50%, -58%);
+    z-index: 5;
+    @include bg-img-contain('~assets/images/big-wheel/pointer.png');
+  }
+}
